@@ -28,7 +28,10 @@ if __name__ == "__main__":
     logger.info(f"Token value: {SOME_SECRET}")
 
     r = requests.get('https://cat-fact.herokuapp.com/facts/')
+    
     if r.status_code == 200:
         data = r.json()
-        temperature = data["forecast"]["temp"]
-        logger.info(f'Weather in Berlin: {temperature}')
+        logger.info(data)
+        print(data)
+        # temperature = data["forecast"]["temp"]
+        logger.info(f'Weather in Berlin:')
